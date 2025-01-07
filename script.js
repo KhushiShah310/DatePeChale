@@ -10,3 +10,17 @@ function respond(answer) {
     }
   }
   
+  // Function to move the "No" button to a random position
+  function moveButton(button) {
+    const container = document.querySelector('.container');
+    const containerWidth = container.offsetWidth;
+    const containerHeight = container.offsetHeight;
+  
+    const randomX = Math.random() * (containerWidth - button.offsetWidth);
+    const randomY = Math.random() * (containerHeight - button.offsetHeight);
+  
+    button.style.position = 'absolute';
+    button.style.left = `${randomX}px`;
+    button.style.top = `${randomY}px`;
+  }
+  
